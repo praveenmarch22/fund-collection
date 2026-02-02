@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://13.201.133.172:5000/api';
-
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: '/api',   // 👈 KEY CHANGE
   headers: {
     'Content-Type': 'application/json'
   }
@@ -53,4 +51,5 @@ export const addMoreWithdrawal = (id, amount, purpose = '') => {
 };
 
 export default api;
+
 
