@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// Updated to use apexcura-agent-apis with village-fund prefix
+const API_URL = 'https://dev.apexcura.com/api/village-fund';
+
 const api = axios.create({
-  baseURL: '/api',   // 👈 KEY CHANGE
+  baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -51,5 +54,3 @@ export const addMoreWithdrawal = (id, amount, purpose = '') => {
 };
 
 export default api;
-
-
