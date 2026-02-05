@@ -53,4 +53,10 @@ export const addMoreWithdrawal = (id, amount, purpose = '') => {
   return api.post(`/withdrawals/${id}/add`, { amount, purpose });
 };
 
+export const addUsage = (id, amount, purpose, withdrawalEntryId) => {
+  return api.post(`/withdrawals/${id}/usage`, { amount, purpose, withdrawalEntryId });
+};
+
 export default api;
+
+
